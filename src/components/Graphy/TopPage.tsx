@@ -1,9 +1,11 @@
 "use client"
 
 import { signIn, signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 export default function TopPage(){
+  const router = useRouter()
     const handleLogin = async() =>{
         await signIn("google", {
         callbackUrl: "/",
@@ -25,15 +27,31 @@ export default function TopPage(){
               <svg className="w-7 h-7 drop-shadow-sm">
               <path d="M 10.111 1.21 C 10.569 0.422 11.581 0.154 12.372 0.61 C 13.162 1.066 13.432 2.075 12.974 2.863 L 6.382 14.242 C 5.924 15.03 4.912 15.298 4.121 14.842 C 3.331 14.386 3.061 13.377 3.519 12.589 Z M 13.408 6.9 C 13.865 6.112 14.877 5.843 15.668 6.3 C 16.458 6.756 16.728 7.764 16.27 8.552 L 12.974 14.242 C 12.516 15.03 11.504 15.298 10.714 14.842 C 9.923 14.386 9.654 13.377 10.111 12.589 Z M 3.519 1.21 C 3.977 0.422 4.989 0.154 5.78 0.61 C 6.57 1.066 6.84 2.075 6.382 2.863 L 3.086 8.552 C 2.628 9.34 1.616 9.609 0.825 9.152 C 0.035 8.696 -0.235 7.688 0.223 6.9 Z" fill="#1c1f33"></path>
               </svg>
-              <span className="font-bold tracking-tight">Graphy</span>
+              <span className="font-bold tracking-tight">
+                <button onClick={()=>router.push("/")}>
+                  Graphy
+                </button>
+              </span>
               <button 
               className="bg-red-500 rounded-lg px-2 py-1 cursor-pointer"
               onClick={()=>handleLogout()}>Logout</button>
             </div>
             <div className="flex gap-8 text-sm items-center">
-              <span className="cursor-pointer hover:text-blue-600">Graphs</span>
-              <span className="cursor-pointer hover:text-blue-600">Blog</span>
-              <span className="cursor-pointer hover:text-blue-600">Pricing</span>
+              <span className="cursor-pointer hover:text-blue-600">
+                <button onClick={()=>router.push("/")}>
+                    Graphs
+                </button>
+              </span>
+              <span className="cursor-pointer hover:text-blue-600">
+                <button onClick={()=>router.push("/blogs")}>
+                  Blog
+                </button>
+              </span>
+              <span className="cursor-pointer hover:text-blue-600">
+                <button onClick={()=>router.push("/pricing")}>
+                  Pricing
+                </button>
+              </span>
               <button 
               className="px-4 py-2 rounded-xl hover:bg-gray-100 cursor-pointer"
               onClick={() => handleLogin()}

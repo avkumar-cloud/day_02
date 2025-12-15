@@ -1,13 +1,12 @@
 "use client"
-import { signIn } from "next-auth/react";
 import React from "react";
-import TopPage from "./components/TopPage";
-import Video from "./components/Video";
-import Benefit from "./components/Benefits";
-import AddData from "./components/Workone";
-import AIMagic from "./components/WorkTwo";
-import ShineData from "./components/WorkThree";
-import TellStory from "./components/WorkFour";
+import TopPage from "../components/Graphy/TopPage";
+import Video from "../components/Graphy/Video";
+import Benefit from "../components/Graphy/Benefits";
+import AddData from "../components/Graphy/Workone";
+import AIMagic from "../components/Graphy/WorkTwo";
+import ShineData from "../components/Graphy/WorkThree";
+import TellStory from "../components/Graphy/WorkFour";
 
 export default function Home() {
   return (
