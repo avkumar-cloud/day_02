@@ -5,26 +5,19 @@
   --foreground: #171717;
 }
 
-@keyframes scroll-left {
+/* Keyframes */
+@keyframes marquee {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);
   }
 }
 
-.animate-scroll-left {
-  animation: scroll-left 18s linear infinite;
-}
-
-
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Tailwind v4 animation token */
+@theme {
+  --animate-marquee: marquee 20s linear infinite;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,7 +30,6 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, sans-serif;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
 }
-
-

@@ -1,3 +1,5 @@
+"use client"
+
 import BottomInfo from "./BottomInfo";
 import GlowIcon from "./GlowIcon";
 
@@ -5,18 +7,6 @@ export default function Footer() {
     
   return (
     <section className="relative w-full min-h-screen">
-
-      {/* STAR DOTS */}
-      {[...Array(30)].map((_, i) => (
-        <span
-          key={i}
-          className="absolute w-1 h-1 bg-white/30 rounded-full"
-          style={{
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`,
-          }}
-        />
-      ))}
 
       {/* LOGO */}
       <div className="absolute top-30 w-full flex justify-center text-sm font-medium opacity-80">
@@ -42,30 +32,30 @@ export default function Footer() {
       {/* LEFT ICONS */}
       <GlowIcon
         src="https://framerusercontent.com/images/fqoIRNvwFUExCG171SurB7yxOc.svg"
-        className="left-[180px] top-[260px]"
+        className="left-[140px] top-[260px]"
       />
       <GlowIcon
         src="https://framerusercontent.com/images/Gpdri8U12xk2xoEiaYodh76ZV0M.svg"
-        className="left-[320px] top-[240px]"
+        className="left-[240px] top-[240px]"
         size={140}
       />
       <GlowIcon
         src="https://framerusercontent.com/images/fqoIRNvwFUExCG171SurB7yxOc.svg"
-        className="left-[260px] bottom-[280px] rotate-12"
+        className="left-[230px] bottom-[280px]"
       />
 
       {/* RIGHT ICONS */}
       <GlowIcon
         src="https://framerusercontent.com/images/qL3vfoHxHmLgdKJuoCRtlbTak.svg"
-        className="right-[320px] top-[260px]"
+        className="right-[260px] top-[260px]"
       />
       <GlowIcon
         src="https://framerusercontent.com/images/1PvWhyQHY47Woe0qWmrQ2V7clzs.svg"
-        className="right-[200px] top-[240px]"
+        className="right-[140px] top-[240px]"
       />
       <GlowIcon
         src="https://framerusercontent.com/images/kHZueVf59pHB0gMCYa5GP4mdrQ.png?scale-down-to=512"
-        className="right-[260px] bottom-[260px]"
+        className="right-[200px] bottom-[260px]"
         size={160}
       />
 
